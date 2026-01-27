@@ -18,7 +18,8 @@ struct MallocMetadata
     MallocMetadata* prev;
 };
 
-int count = 0;
+size_t count = 0;
+size_t bytes = 0;
 bool start = false;
 MallocMetadata* free_blocks_array[MAX_ORDER] = {nullptr};
 MallocMetadata* mmap_blocks_list = nullptr;
@@ -54,14 +55,15 @@ bool initalize_heap(){
             }
             last = metadata;
         }
-        start == true; 
+        start = true;
         count = 32;
+        bytes = 32 * (MAX_BLOCK_SIZE - sizeof(MallocMetadata));
         return 1;
 }
 
 int get_right_order(size_t size) {
     int order = 0;
-    size_t block_size = MIN_BLOCK_SIZE; 
+    size_t block_size = MIN_BLOCK_SIZE;
     while (block_size < size + sizeof(MallocMetadata)) {
         block_size *= 2;
         order++;
@@ -92,7 +94,7 @@ void insert_to_free_blocks_array(MallocMetadata* block) {
         block->prev = nullptr;
         if (curr){
             curr->prev = block;
-        } 
+        }
         free_blocks_array[order] = block;
         return;
     }
@@ -103,7 +105,7 @@ void insert_to_free_blocks_array(MallocMetadata* block) {
     block->prev = curr;
     if (curr->next){
         curr->next->prev = block;
-    } 
+    }
     curr->next = block;
 }
 
@@ -138,6 +140,7 @@ void* smalloc(size_t size){
             mmap_blocks_list->prev = metadata;
         }
         mmap_blocks_list = metadata;
+        bytes += size;
         return metadata + 1;
     }
     int order = get_right_order(size);
@@ -154,7 +157,7 @@ void* smalloc(size_t size){
     MallocMetadata* block_to_remove = free_blocks_array[current_order];
     remove_from_free_blocks_array(block_to_remove);
     block_to_remove->is_free = false;
-    
+
     while (current_order > order){
         current_order--;
         block_to_remove->order = current_order;
@@ -166,6 +169,7 @@ void* smalloc(size_t size){
         buddy->is_free = true;
         buddy->is_mmapped = false;
         insert_to_free_blocks_array(buddy);
+        count++;
     }
     block_to_remove->next = nullptr;
     block_to_remove->prev = nullptr;
@@ -201,6 +205,8 @@ void sfree(void* p){
         if (metadata->next != nullptr){
             metadata->next->prev = metadata->prev;
         }
+        bytes -= (metadata->size - sizeof(MallocMetadata));
+        count--;
         munmap(metadata, metadata->size);
         return;
     }
@@ -214,6 +220,7 @@ void sfree(void* p){
             break;
         }
         remove_from_free_blocks_array(buddy);
+        count--;
         if ((uintptr_t)buddy < (uintptr_t)metadata) {
             metadata = buddy;
         }
@@ -222,10 +229,6 @@ void sfree(void* p){
     }
     insert_to_free_blocks_array(metadata);
 }
-
-
-
-
 
 void* srealloc(void* oldp, size_t size){
     if (size == 0){
@@ -256,7 +259,7 @@ void* srealloc(void* oldp, size_t size){
     if(size + sizeof(MallocMetadata) <= metadata->size){
         return oldp;
     }
-    
+
     bool is_possible = false;
     MallocMetadata* current = metadata;
     size_t current_size = current->size;
@@ -282,15 +285,16 @@ void* srealloc(void* oldp, size_t size){
         while (metadata->size < size + sizeof(MallocMetadata)) {
             uintptr_t buddy_addr = (uintptr_t)metadata ^ metadata->size;
             MallocMetadata* buddy = (MallocMetadata*)buddy_addr;
-            
+
             remove_from_free_blocks_array(buddy);
             buddy->is_free = false;
-            
+            count--;
+
             if ((uintptr_t)buddy < (uintptr_t)metadata) {
                 //left Merge
                 size_t old_payload_size = metadata->size - sizeof(MallocMetadata);
                 std::memmove((void*)(buddy + 1), (void*)(metadata + 1), old_payload_size);
-                
+
                 buddy->size = metadata->size * 2;
                 buddy->order = metadata->order + 1;
                 buddy->is_mmapped = false;
@@ -304,67 +308,58 @@ void* srealloc(void* oldp, size_t size){
         return (void*)(metadata + 1);
     }
 
-        void* newp = smalloc(size);
-        if (newp == nullptr){
-            return nullptr;
-        }
-        std::memmove(newp, oldp, metadata->size - sizeof(MallocMetadata));
-        sfree(oldp);
-        return newp;
+    void* newp = smalloc(size);
+    if (newp == nullptr){
+        return nullptr;
+    }
+    std::memmove(newp, oldp, metadata->size - sizeof(MallocMetadata));
+    sfree(oldp);
+    return newp;
 }
 
 size_t _num_free_blocks(){
-    MallocMetadata* current = head;
     size_t size = 0;
-    while (current != nullptr)
+    for (int i = 0; i < MAX_ORDER; i++)
     {
-        if (current->is_free){
+        MallocMetadata* current = free_blocks_array[i];
+        while (current != nullptr)
+        {
+            if (current->is_free){
             size ++;
-        }
+            }
         current = current->next;
+        }
     }
     return size;
 }
 
 size_t _num_free_bytes(){
-    MallocMetadata* current = head;
     size_t size = 0;
-    while (current != nullptr)
+    for (int i = 0; i < MAX_ORDER; i++)
     {
-        if (current->is_free){
-            size += current->size;
-        }
+        MallocMetadata* current = free_blocks_array[i];
+        while (current != nullptr)
+        {
+            if (current->is_free){
+            size = size + (current->size - sizeof(MallocMetadata));
+            }
         current = current->next;
+        }
     }
     return size;
 }
 
 size_t _num_allocated_blocks(){
-    MallocMetadata* current = head;
-    size_t size = 0;
-    while (current != nullptr)
-    {
-        size ++;
-        current = current->next;
-    }
-    return size;
+    return count;
 }
- 
+
 size_t _num_allocated_bytes(){
-    MallocMetadata* current = head;
-    size_t size = 0;
-    while (current != nullptr)
-    {
-        size += current->size;
-        current = current->next;
-    }
-    return size;
+    return bytes;
 }
- 
+
 size_t _num_meta_data_bytes(){
-    return _num_allocated_blocks() * sizeof(MallocMetadata);
-}
- 
+    return _num_allocated_blocks() * sizeof(MallocMetadata);}
+
 size_t _size_meta_data(){
     return sizeof(MallocMetadata);
 }
