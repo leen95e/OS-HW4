@@ -5,7 +5,7 @@ void* smalloc(size_t size){
     if (size == 0){
         return NULL;
     }
-    if (size >= 100000000){
+    if (size > 100000000){
         return NULL;
     }
     void* p = sbrk(size);

@@ -36,12 +36,12 @@ bool initalize_heap(){
         if (p == (void*)(-1)){
             return 0;
         }
-        heap_base_addr = p;
+        heap_base_addr = (void*)((uintptr_t)p + offset);
 
         MallocMetadata* last = nullptr;
         for (size_t i = 0; i < 32; i++)
         {
-            MallocMetadata* metadata = (MallocMetadata*)((uintptr_t)p + (i * MAX_BLOCK_SIZE));
+            MallocMetadata* metadata = (MallocMetadata*)((uintptr_t)heap_base_addr + (i * MAX_BLOCK_SIZE));
             metadata->size = MAX_BLOCK_SIZE;
             metadata->is_free = true;
             metadata->is_mmapped = false;
@@ -120,7 +120,7 @@ void* smalloc(size_t size){
     if (size == 0){
         return NULL;
     }
-    if (size >= 100000000){
+    if (size > 100000000){
         return NULL;
     }
 
@@ -170,6 +170,7 @@ void* smalloc(size_t size){
         buddy->is_mmapped = false;
         insert_to_free_blocks_array(buddy);
         count++;
+        bytes -= sizeof(MallocMetadata);
     }
     block_to_remove->next = nullptr;
     block_to_remove->prev = nullptr;
@@ -221,6 +222,7 @@ void sfree(void* p){
         }
         remove_from_free_blocks_array(buddy);
         count--;
+        bytes += sizeof(MallocMetadata);
         if ((uintptr_t)buddy < (uintptr_t)metadata) {
             metadata = buddy;
         }
@@ -234,7 +236,7 @@ void* srealloc(void* oldp, size_t size){
     if (size == 0){
         return NULL;
     }
-    if (size >= 100000000){
+    if (size > 100000000){
         return NULL;
     }
     if (oldp == NULL){
@@ -260,12 +262,23 @@ void* srealloc(void* oldp, size_t size){
         return oldp;
     }
 
+
+    if (size + sizeof(MallocMetadata) > MAX_BLOCK_SIZE) {
+        void* newp = smalloc(size);
+        if (newp == nullptr){
+            return nullptr;
+        }
+        std::memmove(newp, oldp, metadata->size - sizeof(MallocMetadata));
+        sfree(oldp);
+        return newp;
+    }
+
     bool is_possible = false;
     MallocMetadata* current = metadata;
     size_t current_size = current->size;
 
     while(current_size < size + sizeof(MallocMetadata)){
-        uintptr_t buddy_addr = (uintptr_t)current ^ current->size;
+        uintptr_t buddy_addr = (uintptr_t)current ^ current_size;
         MallocMetadata* buddy = (MallocMetadata*)buddy_addr;
         if (buddy->is_free == false || buddy->size != current_size) {
             is_possible = false;
@@ -282,6 +295,7 @@ void* srealloc(void* oldp, size_t size){
     }
 
     if(is_possible){
+        size_t original_payload_size = metadata->size - sizeof(MallocMetadata);
         while (metadata->size < size + sizeof(MallocMetadata)) {
             uintptr_t buddy_addr = (uintptr_t)metadata ^ metadata->size;
             MallocMetadata* buddy = (MallocMetadata*)buddy_addr;
@@ -289,11 +303,11 @@ void* srealloc(void* oldp, size_t size){
             remove_from_free_blocks_array(buddy);
             buddy->is_free = false;
             count--;
+            bytes += sizeof(MallocMetadata);
 
             if ((uintptr_t)buddy < (uintptr_t)metadata) {
                 //left Merge
-                size_t old_payload_size = metadata->size - sizeof(MallocMetadata);
-                std::memmove((void*)(buddy + 1), (void*)(metadata + 1), old_payload_size);
+                std::memmove((void*)(buddy + 1), (void*)(metadata + 1), original_payload_size);
 
                 buddy->size = metadata->size * 2;
                 buddy->order = metadata->order + 1;

@@ -1,0 +1,683 @@
+Start testing: Jan 28 17:17 UTC
+----------------------------------------------------------
+1/34 Testing: malloc_1.Sanity
+1/34 Test: malloc_1.Sanity
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_1_test" "Sanity"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_1.Sanity" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Sanity
+Randomness seeded to: 3517647654
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_1.Sanity" end time: Jan 28 17:17 UTC
+"malloc_1.Sanity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/34 Testing: malloc_1.Check size
+2/34 Test: malloc_1.Check size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_1_test" "Check size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_1.Check size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Check size
+Randomness seeded to: 804634279
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_1.Check size" end time: Jan 28 17:17 UTC
+"malloc_1.Check size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/34 Testing: malloc_1.0 size
+3/34 Test: malloc_1.0 size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_1_test" "0 size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_1.0 size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: 0 size
+Randomness seeded to: 2653360640
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_1.0 size" end time: Jan 28 17:17 UTC
+"malloc_1.0 size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/34 Testing: malloc_1.Max size
+4/34 Test: malloc_1.Max size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_1_test" "Max size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_1.Max size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Max size
+Randomness seeded to: 3526141060
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_1.Max size" end time: Jan 28 17:17 UTC
+"malloc_1.Max size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/34 Testing: malloc_2.Sanity
+5/34 Test: malloc_2.Sanity
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Sanity"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Sanity" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Sanity
+Randomness seeded to: 2462304624
+===============================================================================
+All tests passed (19 assertions in 1 test case)
+
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Sanity" end time: Jan 28 17:17 UTC
+"malloc_2.Sanity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/34 Testing: malloc_2.Check size
+6/34 Test: malloc_2.Check size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Check size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Check size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Check size
+Randomness seeded to: 2152465415
+===============================================================================
+All tests passed (33 assertions in 1 test case)
+
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Check size" end time: Jan 28 17:17 UTC
+"malloc_2.Check size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/34 Testing: malloc_2.0 size
+7/34 Test: malloc_2.0 size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "0 size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.0 size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: 0 size
+Randomness seeded to: 2592023041
+===============================================================================
+All tests passed (13 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.0 size" end time: Jan 28 17:17 UTC
+"malloc_2.0 size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/34 Testing: malloc_2.Max size
+8/34 Test: malloc_2.Max size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Max size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Max size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Max size
+Randomness seeded to: 2829914017
+===============================================================================
+All tests passed (27 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Max size" end time: Jan 28 17:17 UTC
+"malloc_2.Max size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/34 Testing: malloc_2.free
+9/34 Test: malloc_2.free
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "free"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.free" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: free
+Randomness seeded to: 2837771046
+===============================================================================
+All tests passed (59 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.free" end time: Jan 28 17:17 UTC
+"malloc_2.free" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/34 Testing: malloc_2.free 2
+10/34 Test: malloc_2.free 2
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "free 2"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.free 2" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: free 2
+Randomness seeded to: 266956313
+===============================================================================
+All tests passed (59 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.free 2" end time: Jan 28 17:17 UTC
+"malloc_2.free 2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/34 Testing: malloc_2.free 3
+11/34 Test: malloc_2.free 3
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "free 3"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.free 3" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: free 3
+Randomness seeded to: 574962468
+===============================================================================
+All tests passed (59 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.free 3" end time: Jan 28 17:17 UTC
+"malloc_2.free 3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/34 Testing: malloc_2.Reuse
+12/34 Test: malloc_2.Reuse
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Reuse"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Reuse" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Reuse
+Randomness seeded to: 799633172
+===============================================================================
+All tests passed (32 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Reuse" end time: Jan 28 17:17 UTC
+"malloc_2.Reuse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/34 Testing: malloc_2.Reuse two blocks
+13/34 Test: malloc_2.Reuse two blocks
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Reuse two blocks"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Reuse two blocks" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Reuse two blocks
+Randomness seeded to: 2734946610
+===============================================================================
+All tests passed (46 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Reuse two blocks" end time: Jan 28 17:17 UTC
+"malloc_2.Reuse two blocks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/34 Testing: malloc_2.Reuse two blocks reverse
+14/34 Test: malloc_2.Reuse two blocks reverse
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Reuse two blocks reverse"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Reuse two blocks reverse" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Reuse two blocks reverse
+Randomness seeded to: 553378353
+===============================================================================
+All tests passed (46 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Reuse two blocks reverse" end time: Jan 28 17:17 UTC
+"malloc_2.Reuse two blocks reverse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/34 Testing: malloc_2.Reuse two blocks both
+15/34 Test: malloc_2.Reuse two blocks both
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Reuse two blocks both"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Reuse two blocks both" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Reuse two blocks both
+Randomness seeded to: 605837283
+===============================================================================
+All tests passed (46 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Reuse two blocks both" end time: Jan 28 17:17 UTC
+"malloc_2.Reuse two blocks both" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/34 Testing: malloc_2.Reuse two blocks sizes small
+16/34 Test: malloc_2.Reuse two blocks sizes small
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Reuse two blocks sizes small"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Reuse two blocks sizes small" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Reuse two blocks sizes small
+Randomness seeded to: 618560886
+===============================================================================
+All tests passed (46 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Reuse two blocks sizes small" end time: Jan 28 17:17 UTC
+"malloc_2.Reuse two blocks sizes small" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/34 Testing: malloc_2.Reuse two blocks sizes large
+17/34 Test: malloc_2.Reuse two blocks sizes large
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "Reuse two blocks sizes large"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.Reuse two blocks sizes large" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Reuse two blocks sizes large
+Randomness seeded to: 1513332086
+===============================================================================
+All tests passed (46 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.Reuse two blocks sizes large" end time: Jan 28 17:17 UTC
+"malloc_2.Reuse two blocks sizes large" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/34 Testing: malloc_2.scalloc
+18/34 Test: malloc_2.scalloc
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "scalloc"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.scalloc" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: scalloc
+Randomness seeded to: 1655445771
+===============================================================================
+All tests passed (51 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.scalloc" end time: Jan 28 17:17 UTC
+"malloc_2.scalloc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/34 Testing: malloc_2.scalloc taint
+19/34 Test: malloc_2.scalloc taint
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "scalloc taint"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.scalloc taint" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: scalloc taint
+Randomness seeded to: 1632723480
+===============================================================================
+All tests passed (232 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.scalloc taint" end time: Jan 28 17:17 UTC
+"malloc_2.scalloc taint" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/34 Testing: malloc_2.scalloc 0 size
+20/34 Test: malloc_2.scalloc 0 size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "scalloc 0 size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.scalloc 0 size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: scalloc 0 size
+Randomness seeded to: 1661259599
+===============================================================================
+All tests passed (21 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.scalloc 0 size" end time: Jan 28 17:17 UTC
+"malloc_2.scalloc 0 size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/34 Testing: malloc_2.scalloc Max size num
+21/34 Test: malloc_2.scalloc Max size num
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "scalloc Max size num"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.scalloc Max size num" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: scalloc Max size num
+Randomness seeded to: 2883863346
+===============================================================================
+All tests passed (27 assertions in 1 test case)
+
+<end of output>
+Test time =   6.47 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.scalloc Max size num" end time: Jan 28 17:17 UTC
+"malloc_2.scalloc Max size num" time elapsed: 00:00:06
+----------------------------------------------------------
+
+22/34 Testing: malloc_2.scalloc Max size size
+22/34 Test: malloc_2.scalloc Max size size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "scalloc Max size size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.scalloc Max size size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: scalloc Max size size
+Randomness seeded to: 1168981716
+===============================================================================
+All tests passed (27 assertions in 1 test case)
+
+<end of output>
+Test time =   1.94 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.scalloc Max size size" end time: Jan 28 17:17 UTC
+"malloc_2.scalloc Max size size" time elapsed: 00:00:01
+----------------------------------------------------------
+
+23/34 Testing: malloc_2.scalloc Max size both
+23/34 Test: malloc_2.scalloc Max size both
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "scalloc Max size both"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.scalloc Max size both" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: scalloc Max size both
+Randomness seeded to: 3704654172
+===============================================================================
+All tests passed (35 assertions in 1 test case)
+
+<end of output>
+Test time =   1.17 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.scalloc Max size both" end time: Jan 28 17:17 UTC
+"malloc_2.scalloc Max size both" time elapsed: 00:00:01
+----------------------------------------------------------
+
+24/34 Testing: malloc_2.realloc
+24/34 Test: malloc_2.realloc
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "realloc"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.realloc" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: realloc
+Randomness seeded to: 322877229
+===============================================================================
+All tests passed (36 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.realloc" end time: Jan 28 17:17 UTC
+"malloc_2.realloc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/34 Testing: malloc_2.realloc shrink
+25/34 Test: malloc_2.realloc shrink
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "realloc shrink"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.realloc shrink" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: realloc shrink
+Randomness seeded to: 4259286555
+===============================================================================
+All tests passed (36 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.realloc shrink" end time: Jan 28 17:17 UTC
+"malloc_2.realloc shrink" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/34 Testing: malloc_2.srealloc Max size
+26/34 Test: malloc_2.srealloc Max size
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_2_test" "srealloc Max size"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_2.srealloc Max size" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: srealloc Max size
+Randomness seeded to: 600278214
+===============================================================================
+All tests passed (35 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_2.srealloc Max size" end time: Jan 28 17:17 UTC
+"malloc_2.srealloc Max size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/34 Testing: malloc_3.Challenge 0 - Memory Utilization
+27/34 Test: malloc_3.Challenge 0 - Memory Utilization
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "Challenge 0 - Memory Utilization"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.Challenge 0 - Memory Utilization" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Challenge 0 - Memory Utilization
+Randomness seeded to: 3126498210
+===============================================================================
+All tests passed (44 assertions in 1 test case)
+
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.Challenge 0 - Memory Utilization" end time: Jan 28 17:17 UTC
+"malloc_3.Challenge 0 - Memory Utilization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/34 Testing: malloc_3.test all sizes
+28/34 Test: malloc_3.test all sizes
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "test all sizes"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.test all sizes" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: test all sizes
+Randomness seeded to: 338613407
+===============================================================================
+All tests passed (110 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.test all sizes" end time: Jan 28 17:17 UTC
+"malloc_3.test all sizes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/34 Testing: malloc_3.Finding buddies test
+29/34 Test: malloc_3.Finding buddies test
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "Finding buddies test"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.Finding buddies test" start time: Jan 28 17:17 UTC
+Output:
+----------------------------------------------------------
+Filters: Finding buddies test
+Randomness seeded to: 2082153479
+===============================================================================
+All tests passed (1420 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.Finding buddies test" end time: Jan 28 17:18 UTC
+"malloc_3.Finding buddies test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/34 Testing: malloc_3.multiple big allocs test
+30/34 Test: malloc_3.multiple big allocs test
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "multiple big allocs test"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.multiple big allocs test" start time: Jan 28 17:18 UTC
+Output:
+----------------------------------------------------------
+Filters: multiple big allocs test
+Randomness seeded to: 907261228
+===============================================================================
+All tests passed (1396 assertions in 1 test case)
+
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.multiple big allocs test" end time: Jan 28 17:18 UTC
+"malloc_3.multiple big allocs test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/34 Testing: malloc_3.srealloc test
+31/34 Test: malloc_3.srealloc test
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "srealloc test"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.srealloc test" start time: Jan 28 17:18 UTC
+Output:
+----------------------------------------------------------
+Filters: srealloc test
+Randomness seeded to: 2520940594
+===============================================================================
+All tests passed (23 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.srealloc test" end time: Jan 28 17:18 UTC
+"malloc_3.srealloc test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/34 Testing: malloc_3.scalloc test
+32/34 Test: malloc_3.scalloc test
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "scalloc test"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.scalloc test" start time: Jan 28 17:18 UTC
+Output:
+----------------------------------------------------------
+Filters: scalloc test
+Randomness seeded to: 749014971
+===============================================================================
+All tests passed (27 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.scalloc test" end time: Jan 28 17:18 UTC
+"malloc_3.scalloc test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/34 Testing: malloc_3.srealloc merges test
+33/34 Test: malloc_3.srealloc merges test
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "srealloc merges test"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.srealloc merges test" start time: Jan 28 17:18 UTC
+Output:
+----------------------------------------------------------
+Filters: srealloc merges test
+Randomness seeded to: 519449717
+===============================================================================
+All tests passed (39 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.srealloc merges test" end time: Jan 28 17:18 UTC
+"malloc_3.srealloc merges test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/34 Testing: malloc_3.weird values
+34/34 Test: malloc_3.weird values
+Command: "/home/student/Desktop/hw4-wet/updatedTests/build/tests/malloc_3_test" "weird values"
+Directory: /home/student/Desktop/hw4-wet/updatedTests/build/tests
+"malloc_3.weird values" start time: Jan 28 17:18 UTC
+Output:
+----------------------------------------------------------
+Filters: weird values
+Randomness seeded to: 137751291
+===============================================================================
+All tests passed (11 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"malloc_3.weird values" end time: Jan 28 17:18 UTC
+"malloc_3.weird values" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 28 17:18 UTC

@@ -17,7 +17,7 @@ void* smalloc(size_t size){
     if (size == 0){
         return NULL;
     }
-    if (size >= 100000000){
+    if (size > 100000000){
         return NULL;
     }
     MallocMetadata* current = head;
@@ -68,7 +68,7 @@ void* srealloc(void* oldp, size_t size){
     if (size == 0){
         return NULL;
     }
-    if (size >= 100000000){
+    if (size > 100000000){
         return NULL;
     }
     if (oldp == NULL){
